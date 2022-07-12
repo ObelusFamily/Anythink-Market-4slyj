@@ -41,7 +41,7 @@ class SettingsForm extends React.Component {
   componentWillMount() {
     if (this.props.currentUser) {
       Object.assign(this.state, {
-        image: this.props.currentUser.image || "",
+        image: this.props.currentUser.image || "placeholder.png",
         username: this.props.currentUser.username,
         bio: this.props.currentUser.bio,
         email: this.props.currentUser.email,
@@ -53,7 +53,7 @@ class SettingsForm extends React.Component {
     if (nextProps.currentUser) {
       this.setState(
         Object.assign({}, this.state, {
-          image: nextProps.currentUser.image || "",
+          image: nextProps.currentUser.image || "placeholder.png",
           username: nextProps.currentUser.username,
           bio: nextProps.currentUser.bio,
           email: nextProps.currentUser.email,
