@@ -1,5 +1,3 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 import psycopg2
 from faker import Faker
 #from app.models.domain import items, comments, users, profiles
@@ -7,18 +5,6 @@ from faker import Faker
 
 print('Please fill the seeds file')
 
-# DATABASE_URI = 'postgres+psycopg2://postgres:postgres@localhost:5432/anythink-market'
-# engine = create_engine(DATABASE_URI)
-# Session = sessionmaker(bind=engine)
-# s = Session()
-
-# comment0 = comments.Comment(
-#     body='Deep Learning',
-#     seller=profiles.Profile(
-#         username='renee0',
-#         bio="renee 0"
-#     )
-# )
 connection = psycopg2.connect(user="postgres",
                                   password="postgres",
                                   host="postgres",
